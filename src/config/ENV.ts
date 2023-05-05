@@ -44,8 +44,8 @@ const ENV = {
     },
     success: {
       ios: 'systemGreen',
-      android: ['@android:color/holo_green_light', '@android:color/holo_green_dark'],
-      default: ['rgb(52,199,85)', 'rgb(48,209,88)'],
+      android: ['@android:color/holo_purple', '@android:color/holo_purple'],
+      default: ['rgb(108, 37, 87)', 'rgb(108, 37, 87)'],
     },
     danger: {
       ios: 'systemRed',

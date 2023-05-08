@@ -29,13 +29,13 @@ const ENV = {
   COLORS: {
     label: {
       ios: 'label',
-      android: ['@android:color/primary_text_light', '@android:color/primary_text_dark'],
-      default: ['rgb(229,229,231)', 'rgb(32,32,35)'],
+      android: ['@android:color/primary_text_light', '@android:color/primary_text_light'],
+      default: ['rgb(229,229,231)', 'rgb(229,229,231)'],
     },
     card: {
       ios: 'systemGray6',
-      android: ['@android:color/background_light', '@android:color/background_dark'],
-      default: ['rgb(216,216,220)', 'rgb(54,54,56)'],
+      android: ['@android:color/background_light', '@android:color/background_light'],
+      default: ['rgb(216,216,220)', 'rgb(216,216,220)'],
     },
     overlay: {
       ios: 'black',
@@ -49,13 +49,13 @@ const ENV = {
     },
     danger: {
       ios: 'systemRed',
-      android: ['@android:color/holo_red_light', '@android:color/holo_red_dark'],
-      default: ['rgb(255,59,48)', 'rgb(255,69,58)'],
+      android: ['@android:color/holo_red_light', '@android:color/holo_red_light'],
+      default: ['rgb(255,59,48)', 'rgb(255,59,48)'],
     },
     warning: {
       ios: 'systemOrange',
-      android: ['@android:color/holo_orange_light', '@android:color/holo_orange_dark'],
-      default: ['rgb(255,149,0)', 'rgb(255,159,10)'],
+      android: ['@android:color/holo_orange_light', '@android:color/holo_orange_light'],
+      default: ['rgb(255,149,0)', 'rgb(255,149,0)'],
     },
   },
 };

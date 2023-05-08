@@ -39,7 +39,7 @@ const Section: React.FC<
         style={[
           styles.sectionTitle,
           {
-            color: isDarkMode ? Colors.white : Colors.white,
+            color: Colors.white,
           },
         ]}>
         {title}
@@ -48,7 +48,7 @@ const Section: React.FC<
         style={[
           styles.sectionDescription,
           {
-            color: isDarkMode ? Colors.light : Colors.light,
+            color: Colors.light,
           },
         ]}>
         {children}
@@ -61,19 +61,19 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.lighter : Colors.lighter,
+    backgroundColor: Colors.lighter,
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'light-content'} />
+      <StatusBar barStyle={'light-content'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
         <View
           style={{
-            backgroundColor: isDarkMode ? Colors.white : Colors.white,
+            backgroundColor: Colors.white,
           }}>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this

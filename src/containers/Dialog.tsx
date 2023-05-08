@@ -267,7 +267,7 @@ const __styles = (isDark: boolean) =>
       paddingTop: 50,
       paddingBottom: 24,
       position: 'absolute',
-      backgroundColor: Color.get('card', isDark),
+      backgroundColor: Color.get('card', false),
     },
 
     cardBody: {
@@ -281,11 +281,11 @@ const __styles = (isDark: boolean) =>
     titleLabel: {
       fontWeight: 'bold',
       fontSize: 20,
-      color: Color.get('label', isDark),
+      color: Color.get('label', false),
     },
     descLabel: {
       textAlign: 'center',
-      color: Color.get('label', isDark),
+      color: Color.get('label', false),
     },
     button: {
       borderRadius: 50,
@@ -302,13 +302,13 @@ const __styles = (isDark: boolean) =>
       fontSize: 16,
     },
     [ALERT_TYPE.SUCCESS]: {
-      backgroundColor: Color.get('success', isDark),
+      backgroundColor: Color.get('success', false),
     },
     [ALERT_TYPE.DANGER]: {
-      backgroundColor: Color.get('danger', isDark),
+      backgroundColor: Color.get('danger', false),
     },
     [ALERT_TYPE.WARNING]: {
-      backgroundColor: Color.get('warning', isDark),
+      backgroundColor: Color.get('warning', false),
     },
     backendImage: {
       position: 'absolute',
@@ -329,12 +329,12 @@ const __styles = (isDark: boolean) =>
     },
 
     [`${ALERT_TYPE.SUCCESS}Image`]: {
-      tintColor: Color.get('success', isDark),
+      tintColor: Color.get('success', false),
     },
     [`${ALERT_TYPE.DANGER}Image`]: {
-      tintColor: Color.get('danger', isDark),
+      tintColor: Color.get('danger', false),
     },
     [`${ALERT_TYPE.WARNING}Image`]: {
-      tintColor: Color.get('warning', isDark),
+      tintColor: Color.get('warning', false),
     },
   });

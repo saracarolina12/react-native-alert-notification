@@ -12,7 +12,7 @@ type IProps = {
   theme?: 'light' | 'dark';
   colors?: [IColors, IColors] /** ['light_colors' , 'dark_colors'] */;
   children: ReactElement | ReactElement[];
-};
+}; 
 
 export const Root: React.FunctionComponent<IProps> = ({ theme, colors, children, dialogConfig, toastConfig }) => {
   const colorScheme = RN.useColorScheme?.();
@@ -26,8 +26,8 @@ export const Root: React.FunctionComponent<IProps> = ({ theme, colors, children,
       <SafeAreaProvider>
         <View style={styles.content}>
           <React.Fragment>
-            <Dialog ref={Dialog.instance} isDark={isDark} config={dialogConfig} />
-            <Toast ref={Toast.instance} isDark={isDark} config={toastConfig} />
+            <Dialog ref={Dialog.instance} isDark={false} config={dialogConfig} />
+            <Toast ref={Toast.instance} isDark={false} config={toastConfig} />
             {children}
           </React.Fragment>
         </View>
@@ -38,8 +38,8 @@ export const Root: React.FunctionComponent<IProps> = ({ theme, colors, children,
   return (
     <View style={styles.content}>
       <React.Fragment>
-        <Dialog ref={Dialog.instance} isDark={isDark} config={dialogConfig} />
-        <Toast ref={Toast.instance} isDark={isDark} config={toastConfig} />
+        <Dialog ref={Dialog.instance} isDark={false} config={dialogConfig} />
+        <Toast ref={Toast.instance} isDark={false} config={toastConfig} />
         {children}
       </React.Fragment>
     </View>

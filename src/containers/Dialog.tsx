@@ -77,7 +77,7 @@ export class Dialog extends React.Component<IProps, IState> {
     this._popupHeight = 0;
 
     this.state = {
-      styles: __styles(props.isDark),
+      styles: __styles(false),
       visible: false,
     };
   }

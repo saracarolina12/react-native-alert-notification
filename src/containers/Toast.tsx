@@ -90,7 +90,7 @@ export class Toast extends React.Component<IProps, IState> {
     const { isDark, config: configGeneral } = this.props;
     return (
       <SafeAreaInsetsContext.Consumer>
-        {(insets) => <ToastRender {...data} isDark={isDark} paddingTop={insets?.top} configGeneral={configGeneral} onClose={this._closedHandler} />}
+        {(insets) => <ToastRender {...data} isDark={false} paddingTop={insets?.top} configGeneral={configGeneral} onClose={this._closedHandler} />}
       </SafeAreaInsetsContext.Consumer>
     );
   }

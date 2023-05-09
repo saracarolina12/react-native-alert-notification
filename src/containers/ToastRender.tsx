@@ -36,7 +36,7 @@ export class ToastRender extends React.Component<IProps, IState> {
     this._countdown = null;
     this.state = {
       isInit: false,
-      styles: __styles(false),
+      styles: __styles(),
     };
   }
 
@@ -162,7 +162,7 @@ const __styles = () =>
       paddingHorizontal: 12,
       paddingTop: 12,
       paddingBottom: 12,
-      backgroundColor: Color.get('card', false),
+      backgroundColor: Color.get('card'),
       ...Platform.select({
         ios: {
           borderRadius: 12,
@@ -184,10 +184,10 @@ const __styles = () =>
     titleLabel: {
       fontWeight: 'bold',
       fontSize: 18,
-      color: Color.get('label', false),
+      color: Color.get('label'),
     },
     descLabel: {
-      color: Color.get('label', false),
+      color: Color.get('label'),
     },
     backendImage: {
       position: 'absolute',
@@ -206,12 +206,12 @@ const __styles = () =>
     },
 
     [`${ALERT_TYPE.SUCCESS}Image`]: {
-      tintColor: Color.get('success', false),
+      tintColor: Color.get('success'),
     },
     [`${ALERT_TYPE.DANGER}Image`]: {
-      tintColor: Color.get('danger', false),
+      tintColor: Color.get('danger'),
     },
     [`${ALERT_TYPE.WARNING}Image`]: {
-      tintColor: Color.get('warning', false),
+      tintColor: Color.get('warning'),
     },
   });

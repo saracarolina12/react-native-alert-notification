@@ -76,7 +76,7 @@ export class Dialog extends React.Component<IProps, IState> {
     this._popupHeight = 0;
 
     this.state = {
-      styles: __styles(false),
+      styles: __styles(),
       visible: false,
     };
   }
@@ -263,7 +263,7 @@ const __styles = () =>
       paddingTop: 50,
       paddingBottom: 24,
       position: 'absolute',
-      backgroundColor: Color.get('card', false),
+      backgroundColor: Color.get('card'),
     },
 
     cardBody: {
@@ -277,11 +277,11 @@ const __styles = () =>
     titleLabel: {
       fontWeight: 'bold',
       fontSize: 20,
-      color: Color.get('label', false),
+      color: Color.get('label'),
     },
     descLabel: {
       textAlign: 'center',
-      color: Color.get('label', false),
+      color: Color.get('label'),
     },
     button: {
       borderRadius: 50,
@@ -298,13 +298,13 @@ const __styles = () =>
       fontSize: 16,
     },
     [ALERT_TYPE.SUCCESS]: {
-      backgroundColor: Color.get('success', false),
+      backgroundColor: Color.get('success'),
     },
     [ALERT_TYPE.DANGER]: {
-      backgroundColor: Color.get('danger', false),
+      backgroundColor: Color.get('danger'),
     },
     [ALERT_TYPE.WARNING]: {
-      backgroundColor: Color.get('warning', false),
+      backgroundColor: Color.get('warning'),
     },
     backendImage: {
       position: 'absolute',
@@ -325,12 +325,12 @@ const __styles = () =>
     },
 
     [`${ALERT_TYPE.SUCCESS}Image`]: {
-      tintColor: Color.get('success', false),
+      tintColor: Color.get('success'),
     },
     [`${ALERT_TYPE.DANGER}Image`]: {
-      tintColor: Color.get('danger', false),
+      tintColor: Color.get('danger'),
     },
     [`${ALERT_TYPE.WARNING}Image`]: {
-      tintColor: Color.get('warning', false),
+      tintColor: Color.get('warning'),
     },
   });

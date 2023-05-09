@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ReactElement, useContext } from 'react';
-import RN, { View } from 'react-native';
+import  { View } from 'react-native';
 import { SafeAreaInsetsContext, SafeAreaProvider } from 'react-native-safe-area-context';
 import { Dialog, IConfigDialog, IConfigToast, Toast } from './';
 import { Color, IColors } from '../service';

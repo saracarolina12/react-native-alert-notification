@@ -40,13 +40,13 @@ export class ToastRender extends React.Component<IProps, IState> {
     };
   }
 
-  public componentDidUpdate = async (prevProps: Readonly<IProps>, prevState: Readonly<IState>): Promise<void> => {
-    if (!prevState.isInit && this.state.isInit) {
-      await new Promise((resolve) => this._animatedTiming(0).start(resolve));
-      this._autoCloseHandler();
-    }
+  // public componentDidUpdate = async (prevProps: Readonly<IProps>, prevState: Readonly<IState>): Promise<void> => {
+  //   if (!prevState.isInit && this.state.isInit) {
+  //     await new Promise((resolve) => this._animatedTiming(0).start(resolve));
+  //     this._autoCloseHandler();
+  //   }
     
-  };
+  // };
 
   public componentWillUnmount = (): void => {
     this._countdown?.();

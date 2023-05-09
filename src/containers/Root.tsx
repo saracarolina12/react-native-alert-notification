@@ -14,8 +14,8 @@ type IProps = {
   children: ReactElement | ReactElement[];
 }; 
 
-export const Root: React.FunctionComponent<IProps> = ({ theme, colors, children, dialogConfig, toastConfig }) => {
-  const colorScheme = RN.useColorScheme?.();
+export const Root: React.FunctionComponent<IProps> = ({ colors, children, dialogConfig, toastConfig }) => {
+  // const colorScheme = RN.useColorScheme?.();
   const safeAreaInsetsContext = useContext(SafeAreaInsetsContext);
   Color.colorsCustom = colors;
 

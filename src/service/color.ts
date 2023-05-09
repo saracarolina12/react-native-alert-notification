@@ -22,10 +22,10 @@ export class Color {
     }
 
     const color = ENV.COLORS[key];
-    const index = !isDark ? 0 : 1;
+    const index = 0;
     const i_a = Platform.select<string | undefined | ReactNative.OpaqueColorValue>({
       ios: ReactNative?.PlatformColor(color.ios) ?? color.default[index],
-      android: ReactNative?.PlatformColor(color.android[index]) ?? color.default[index],
+      android: ReactNative?.PlatformColor(color.android[0]) ?? color.default[0],
     });
 
     return i_a ?? color.default[index];

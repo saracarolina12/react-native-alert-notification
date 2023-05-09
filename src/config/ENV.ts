@@ -39,8 +39,8 @@ const ENV = {
     },
     overlay: {
       ios: 'black',
-      android: ['@android:color/background_dark', '@android:color/background_dark'],
-      default: ['#000000', '#000000'],
+      android: ['@android:color/background_light', '@android:color/background_light'],
+      default: ['#ffffff', '#ffffff'],
     },
     success: {
       ios: 'systemGreen',

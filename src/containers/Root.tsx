@@ -19,15 +19,15 @@ export const Root: React.FunctionComponent<IProps> = ({ theme, colors, children,
   const safeAreaInsetsContext = useContext(SafeAreaInsetsContext);
   Color.colorsCustom = colors;
 
-  const isDark = (theme ?? colorScheme) === 'dark';
+  // const  = (theme ?? colorScheme) === 'dark';
 
   if (safeAreaInsetsContext === null) {
     return (
       <SafeAreaProvider>
         <View style={styles.content}>
           <React.Fragment>
-            <Dialog ref={Dialog.instance} isDark={false} config={dialogConfig} />
-            <Toast ref={Toast.instance} isDark={false} config={toastConfig} />
+            <Dialog ref={Dialog.instance}  config={dialogConfig} />
+            <Toast ref={Toast.instance}  config={toastConfig} />
             {children}
           </React.Fragment>
         </View>
@@ -38,8 +38,8 @@ export const Root: React.FunctionComponent<IProps> = ({ theme, colors, children,
   return (
     <View style={styles.content}>
       <React.Fragment>
-        <Dialog ref={Dialog.instance} isDark={false} config={dialogConfig} />
-        <Toast ref={Toast.instance} isDark={false} config={toastConfig} />
+        <Dialog ref={Dialog.instance} config={dialogConfig} />
+        <Toast ref={Toast.instance}  config={toastConfig} />
         {children}
       </React.Fragment>
     </View>

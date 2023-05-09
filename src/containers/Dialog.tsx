@@ -16,7 +16,6 @@ export type IConfigDialog = {
 };
 
 type IProps = {
-  isDark: boolean;
   config?: Pick<IConfigDialog, 'closeOnOverlayTap' | 'autoClose'>;
 };
 
@@ -85,11 +84,8 @@ export class Dialog extends React.Component<IProps, IState> {
   /**
    * @param {Readonly<IProps>} prevProps
    */
-  public componentDidUpdate = (prevProps: Readonly<IProps>): void => {
-    if (prevProps.isDark !== this.props.isDark) {
-      // eslint-disable-next-line react/no-did-update-set-state
-      this.setState((prevState) => ({ ...prevState, styles: __styles(this.props.isDark) }));
-    }
+  // public componentDidUpdate = (prevProps: Readonly<IProps>): void => {
+    public componentDidUpdate = (): void => {
   };
 
   /**
@@ -251,7 +247,7 @@ export class Dialog extends React.Component<IProps, IState> {
   };
 }
 
-const __styles = (isDark: boolean) =>
+const __styles = () =>
   StyleSheet.create({
     backgroundContainer: {
       ...StyleSheet.absoluteFillObject,

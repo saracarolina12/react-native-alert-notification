@@ -4,7 +4,6 @@ import { Color, getImage } from '../service';
 import { ALERT_TYPE } from '../config';
 
 interface IProps {
-  isDark: boolean;
   paddingTop?: number;
   type?: ALERT_TYPE;
   title?: string;
@@ -46,9 +45,7 @@ export class ToastRender extends React.Component<IProps, IState> {
       await new Promise((resolve) => this._animatedTiming(0).start(resolve));
       this._autoCloseHandler();
     }
-    if (prevProps.isDark !== this.props.isDark) {
-      this.setState({ ...prevState, styles: __styles(this.props.isDark) });
-    }
+    
   };
 
   public componentWillUnmount = (): void => {
@@ -117,7 +114,7 @@ export class ToastRender extends React.Component<IProps, IState> {
     const { type, title, description, titleStyle, textBodyStyle } = this.props;
     const { styles } = this.state;
     // if (model) {
-    //   return model({ isDark, type, title, description });
+    //   return model({  type, title, description });
     // }
     return (
       <View style={styles.cardContainer}>
@@ -152,7 +149,7 @@ export class ToastRender extends React.Component<IProps, IState> {
   }
 }
 
-const __styles = (isDark: boolean) =>
+const __styles = () =>
   StyleSheet.create({
     container: {
       position: 'absolute',

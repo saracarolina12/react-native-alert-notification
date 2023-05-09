@@ -1,7 +1,7 @@
 import ReactNative, { Platform } from 'react-native';
 import { ENV } from '../config';
 
-type IGet = (key: keyof IColors, isDark: boolean) => string | undefined | ReactNative.OpaqueColorValue;
+type IGet = (key: keyof IColors ) => string | undefined | ReactNative.OpaqueColorValue;
 export type IColors = {
   label: string;
   card: string;
@@ -14,10 +14,9 @@ export type IColors = {
 export class Color {
   public static colorsCustom?: [IColors] | [IColors, IColors];
 
-  public static get: IGet = (key, isDark) => {
-    isDark = false
+  public static get: IGet = (key ) => {
     if (Color.colorsCustom) {
-      const index = isDark && Color.colorsCustom.length === 2 ? 1 : 0;
+      const index =  Color.colorsCustom.length === 2 ? 1 : 0;
       return Color.colorsCustom[index]![key];
     }
 

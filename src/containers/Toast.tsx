@@ -4,7 +4,7 @@ import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ALERT_TYPE } from '../config';
 import { ToastRender } from './ToastRender';
 
-//export type IModelFunc = (args: { isDark: boolean; type?: ALERT_TYPE; title?: string; description?: string }) => ReactElement;
+//export type IModelFunc = (args: {  type?: ALERT_TYPE; title?: string; description?: string }) => ReactElement;
 
 export type IConfigToast = {
   autoClose?: number | boolean;
@@ -20,7 +20,6 @@ export type IConfigToast = {
 };
 
 type IProps = {
-  isDark: boolean;
   config?: Pick<IConfigToast, 'autoClose' | 'titleStyle' | 'textBodyStyle'>;
 };
 
@@ -87,10 +86,10 @@ export class Toast extends React.Component<IProps, IState> {
     if (!data) {
       return null;
     }
-    const { isDark, config: configGeneral } = this.props;
+    const {  config: configGeneral } = this.props;
     return (
       <SafeAreaInsetsContext.Consumer>
-        {(insets) => <ToastRender {...data} isDark={false} paddingTop={insets?.top} configGeneral={configGeneral} onClose={this._closedHandler} />}
+        {(insets) => <ToastRender {...data} paddingTop={insets?.top} configGeneral={configGeneral} onClose={this._closedHandler} />}
       </SafeAreaInsetsContext.Consumer>
     );
   }
